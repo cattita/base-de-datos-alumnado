@@ -1,0 +1,1 @@
+Debe presionar el botón correspondiente a cada sección, ya que sino no podrá avanzar en la inscripción  del alumno. Por otra parte solo se permite inscribir al alumno solo una vez por grupo, no puede repetirse pero si ser inscrito en otro grupo. Y finalmente comentar que la nota máxima es un 7.0, ya que la hice según las calificaciones de evaluación en Chile.
