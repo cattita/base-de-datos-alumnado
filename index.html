@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Alumnos</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gestión de Alumnos</h1>
+
+    <!-- Alta de Alumnos -->
+    <section>
+      <h2>Alta de Alumnos</h2>
+      <form id="formAlumno">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <input type="text" id="apellidos" placeholder="Apellidos" required />
+        <input type="number" id="edad" placeholder="Edad" min="1" required />
+        <button type="submit">Agregar Alumno</button>
+      </form>
+      <ul id="listaAlumnos"></ul>
+    </section>
+
+    <!-- Inscripción a Materias -->
+    <section>
+      <h2>Inscribir a Materia</h2>
+      <form id="formMateria">
+        <label for="alumnoMateria">Alumno:</label>
+        <select id="alumnoMateria"></select>
+
+        <input type="text" id="materia" placeholder="Materia" required />
+        <button type="submit">Inscribir</button>
+      </form>
+    </section>
+
+    <!-- Asignar Calificación -->
+    <section>
+      <h2>Asignar Calificación</h2>
+      <form id="formNota">
+        <select id="alumnoNota"></select>
+        <select id="materiaNota"></select>
+        
+        <input type="number" id="nota" placeholder="Calificación" step="0.1" min="1" max="7" required>
+        <button type="submit">Asignar</button>
+      </form>
+    </section>
+
+    <!-- Crear Grupos -->
+    <section>
+      <h2>Gestión de Grupos</h2>
+      <form id="formGrupo">
+        <input type="text" id="nombreGrupo" placeholder="Nombre del Grupo" required />
+        <button type="submit">Crear Grupo</button>
+      </form>
+
+      <div class="asignar-grupo">
+        <label for="selectGrupo">Grupo:</label>
+        <select id="selectGrupo"></select>
+
+        <label for="selectAlumnoGrupo">Alumno:</label>
+        <select id="selectAlumnoGrupo"></select>
+
+        <button id="btnAsignarAGrupo">Asignar Alumno al Grupo</button>
+      </div>
+
+      <ul id="gruposInfo"></ul>
+    </section>
+
+    <!-- Búsqueda y Ordenamiento -->
+    <section>
+      <h2>Búsqueda y Ordenamiento</h2>
+      <p>Ingresa el nombre, apellido o edad del alumno/a:</p>
+      <input type="text" id="busqueda" placeholder="Buscar por nombre/apellido/edad" />
+      <button type="button" onclick="buscar()">Buscar</button>
+      <button type="button" onclick="ordenar(true)">Ordenar Ascendente</button>
+      <button type="button" onclick="ordenar(false)">Ordenar Descendente</button>
+      <ul id="resultadoBusqueda"></ul>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
